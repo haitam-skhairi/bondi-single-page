@@ -82,6 +82,36 @@ body {
     transform: translateX(-50%);
 }
 
+.features .feat {
+    padding: 0;
+}
+
+.features .feat {
+    position: relative;
+    overflow: hidden;
+}
+
+.features .feat::before {
+    content: "See More";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: rgba(255 51 102 / 90%);
+    color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+    transition: .5s;
+}
+
+.features .feat:hover::before {
+    left: 0;
+}
+
 /* About */
 .about {
     position: relative;
@@ -102,6 +132,14 @@ body {
     background-color: var(--blue);
 }
 
+.team .member {
+    transition: .3s;
+}
+
+.team .member:hover {
+    transform: translateY(-15px);
+}
+
 /*Project */
 .project {
     background-color: var(--dark);
@@ -110,7 +148,13 @@ body {
 /* Block */
 .block .card {
     border-color: #eee;
-    box-shadow: 5px 0 10px rgb(0 0 0 / .1);
+    transition: .3s;
+    position: relative;
+}
+.block .card:hover {
+    box-shadow: 10px 5px 15px rgb(0 0 0 / .3);
+    transform: scale(1.2);
+    z-index: 100;
 }
 /* Subscribe */
 .subscribe {
