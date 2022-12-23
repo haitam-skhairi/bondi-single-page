@@ -83,12 +83,9 @@ body {
 }
 
 .features .feat {
-    padding: 0;
-}
-
-.features .feat {
     position: relative;
     overflow: hidden;
+    padding: 0;
 }
 
 .features .feat::before {
@@ -104,12 +101,22 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 23px;
     transition: .5s;
 }
 
 .features .feat:hover::before {
     left: 0;
+}
+
+.features .feat img {
+    width: 100%;
+}
+.features .feat-cashed {
+    display: none;
+}
+.features .feat-block {
+    display: block;
 }
 
 /* About */
@@ -135,7 +142,6 @@ body {
 .team .member {
     transition: .3s;
 }
-
 .team .member:hover {
     transform: translateY(-15px);
 }
@@ -152,9 +158,14 @@ body {
     position: relative;
 }
 .block .card:hover {
-    box-shadow: 10px 5px 15px rgb(0 0 0 / .3);
-    transform: scale(1.2);
+    box-shadow: 10px 0px 10px rgb(0 0 0 / .3);
+    transform: scale(1.1);
     z-index: 100;
+}
+@media (max-width: 787px) {
+    .block .card:hover {
+        transform: scale(1);
+    }
 }
 /* Subscribe */
 .subscribe {
